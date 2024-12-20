@@ -33,9 +33,9 @@ public class Main {
         int yearQuantity = 1;
         while (yearQuantity <= 10) {
             population = population + (population / 1000 * 17) - (population / 1000 * 8);
+            System.out.println("Год " + yearQuantity + ", численность населения составляет " + population);
             yearQuantity++;
         }
-        System.out.println("Год " + yearQuantity + ", численность населения составляет " + population);
 
         // task 4
         System.out.println("task 4");
@@ -88,13 +88,21 @@ public class Main {
         // task 7
         System.out.println("task 7");
         // не очень поняла задание, но надеюсь, что правильно
-        // примем, что месяц начинается с понедельника
-        for (int fridayDay = 5; fridayDay <= 31; fridayDay = fridayDay + 7) {
-            System.out.println("today is a Friday " + fridayDay);
-        }
-        // а теперь, что месяц начинается с пятницы
-        for (int fridayDay = 1; fridayDay <= 31; fridayDay = fridayDay + 7) {
-            System.out.println("today is a Friday " + fridayDay);
+        /**
+         * // примем, что месяц начинается с понедельника
+         *         for (int fridayDay = 5; fridayDay <= 31; fridayDay = fridayDay + 7) {
+         *             System.out.println("today is a Friday " + fridayDay);
+         *         }
+         *         // а теперь, что месяц начинается с пятницы
+         *         for (int fridayDay = 1; fridayDay <= 31; fridayDay = fridayDay + 7) {
+         *             System.out.println("today is a Friday " + fridayDay);
+         *         }
+         */
+
+        for (int firstFriday = 1; firstFriday <= 7; firstFriday++) {
+            for (int fridayDay = firstFriday; fridayDay <= 31; fridayDay = fridayDay + 7) {
+                System.out.println("Сегодня пятница, " + fridayDay + "-е число. Необходимо подготовить отчет");
+            }
         }
 
         // task 8
