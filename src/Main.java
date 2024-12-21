@@ -107,16 +107,22 @@ public class Main {
 
         // task 8
         System.out.println("task 8");
+        System.out.println("8.1");
         int currentYear = 2024;
         int yearsAgo = 200;
         int yearsAhead = 100;
+        int step = 79;
         // на мой взгляд самое оптимальное решение
         for (int year = currentYear - yearsAgo; year <= currentYear + yearsAhead; year++) {
-            if (year % 79 == 0) {
+            //System.out.println("итерация");
+            if (year % step == 0) {
                 System.out.println(year);
+                year += (step - 1);
+                // так будет гораздо меньше итераций, а "-1", так как сам for еще прибавит 1, чтобы не перескочить лишнее
             }
         }
         //
+        System.out.println("8.2");
         int year = currentYear - yearsAgo;
         while (year <= currentYear + yearsAhead) {
             if (year % 79 == 0) {
@@ -126,6 +132,7 @@ public class Main {
         }
         // или так
         // просто для практики continue и отрицания
+        System.out.println("8.3");
         for (year = currentYear - yearsAgo; year <= currentYear + yearsAhead; year++) {
             if (year % 79 != 0) {
                 continue;
